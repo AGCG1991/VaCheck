@@ -3,4 +3,14 @@ Repositorio orientado al desarrollo de una aplicación de gestión para la vacun
 
 Miembros:
 
-Aitor Gustavo Camacho Gutiérrez - Rol: Programador y coordinador
+ 
+| Nombre Completo| Roles de equipo |
+| :---:      | :---:       |
+| Aitor Gustavo Camacho Gutiérrez | Rol: Programador y coordinador |
+| -| - |
+| -| - |
+| -| - |
+| -| - |
+| -| - |
+| -| - |
+| -| - |
