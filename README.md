@@ -6,7 +6,7 @@ Miembros:
  
 | Nombre Completo| Roles de equipo |
 | :---:      | :---:       |
-| Aitor Gustavo Camacho Gutiérrez | Rol: Programador y coordinador |
+| Aitor Gustavo Camacho Gutiérrez | Programador y coordinador |
 | -| - |
 | -| - |
 | -| - |
