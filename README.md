@@ -17,6 +17,7 @@ Repositorio orientado al desarrollo de una aplicación de gestión para la vacun
 | -| - |
 | -| - |
 | -| - |
+<<<<<<< HEAD
 
 ## ** Requisitos iniciales **
 
@@ -52,3 +53,5 @@ la presión arterial, etc.
 -[] ...
 -[] ...
 -[]
+=======
+>>>>>>> 3e4dada1d22d8792b289ec35dcea080a18fcd885
