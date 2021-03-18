@@ -10,7 +10,7 @@ Repositorio orientado al desarrollo de una aplicación de gestión para la vacun
 | Nombre Completo| Roles de equipo |
 | :---:      | :---:       |
 | Aitor Gustavo Camacho Gutiérrez | Programador y coordinador |
-| -| - |
+| Javier Morales Lara | Requisitos y programador |
 | -| - |
 | -| - |
 | -| - |
