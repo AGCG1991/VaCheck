@@ -16,6 +16,8 @@ Repositorio orientado al desarrollo de una aplicación de gestión para la vacun
 | Pablo Tamayo medina| Programador y calidad |
 | Fernando Jesus Fuentes Carrasco| Coordinador y diseño |
 | Antonio Carmona Marín| Jefe de proyecto y calidad |
+| Alejandro Maldonado Robles| Diseño y requisitos |
+
 
 
 
