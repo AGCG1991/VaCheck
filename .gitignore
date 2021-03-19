@@ -1,0 +1,6 @@
+*.pdf
+
+#Eclipse
+.classpath
+.project
+settings/
