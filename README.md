@@ -15,7 +15,7 @@ Repositorio orientado al desarrollo de una aplicación de gestión para la vacun
 | Jesus Mora Hilillo| Programador (Testeo y pruebas) |
 | Pablo Tamayo medina| Programador y calidad |
 | Fernando Jesus Fuentes Carrasco| Coordinador y diseño |
-| Antonio Carmona Marín| Jefe de proyecto y calidad |
+| Antonio Carmona Marín | Jefe de proyecto y Calidad |
 | Alejandro Maldonado Robles| Diseño y requisitos |
 
 
