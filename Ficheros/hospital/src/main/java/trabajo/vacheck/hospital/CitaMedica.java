@@ -10,6 +10,12 @@ public class CitaMedica {
     private Date fechaCita;
     private String hospitalAsignado;
 
+    //Método constructor
+
+    public CitaMedica(){
+
+    }
+
     //Métodos getter y setter
 
     public String getIdCita() {
