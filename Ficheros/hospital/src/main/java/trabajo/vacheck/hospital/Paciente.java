@@ -1,17 +1,25 @@
 package trabajo.vacheck.hospital;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Paciente {
 
-    private String IdPaciente;
+    @Id
+    @GeneratedValue
+    private Integer IdPaciente;
     private boolean HaFallecido;
 
-    public String getIdPaciente() {
+    public Paciente(){
+
+    }
+
+    public int getIdPaciente() {
         return IdPaciente;
     }
-    public void setIdPaciente(String idPaciente) {
+    public void setIdPaciente(int idPaciente) {
         IdPaciente = idPaciente;
     }
     public boolean isHaFallecido() {

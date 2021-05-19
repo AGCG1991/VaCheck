@@ -1,16 +1,22 @@
 package trabajo.vacheck.hospital;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
-public class Sanitario extends trabajo.vacheck.hospital.Usuario {
-    final private String IDsanitario;
+public class Sanitario {
 
-    public Sanitario(String IDsan){
-        IDsanitario = IDsan;
+    @Id
+    @GeneratedValue
+    private Integer IDsanitario;
+
+    public Sanitario(Integer x){
+        IDsanitario = x;
     }
 
-    public String getIDsanitario() {
+    public Integer getIDsanitario() {
         return IDsanitario;
     }
+
 }

@@ -1,13 +1,17 @@
 package trabajo.vacheck.hospital;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 import java.util.Objects;
 
 @Entity
 public class CitaMedica {
 
-    private String IdCita; //Identificador unico de la cita
+    @Id
+    @GeneratedValue
+    private Integer IdCita; //Identificador unico de la cita
     private Date fechaCita;
     private String hospitalAsignado;
 
@@ -19,11 +23,11 @@ public class CitaMedica {
 
     //Métodos getter y setter
 
-    public String getIdCita() {
+    public int getIdCita() {
         return IdCita;
     }
 
-    public void setIdCita(String idCita) {
+    public void setIdCita(int idCita) {
         IdCita = idCita;
     }
 

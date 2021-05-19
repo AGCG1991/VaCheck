@@ -1,11 +1,16 @@
 package trabajo.vacheck.hospital;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Usuario {
 	
 	//Atributos
+	@Id
+	@GeneratedValue
+	private int id;
 	private String nombre,sexo,calle,municipio,email,contrasenia;
 	private int edad,telefono,codigoPostal;
 	private boolean estaVacunado;

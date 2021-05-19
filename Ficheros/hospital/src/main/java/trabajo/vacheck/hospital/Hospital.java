@@ -1,13 +1,22 @@
 package trabajo.vacheck.hospital;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Hospital {
 
+    @Id
+    @GeneratedValue
+    private int id;
     private String Direccion;
     private String Nombre;
     private int NumeroVacunados;
+
+    public Hospital(){
+
+    }
 
 
     public String getDireccion() {

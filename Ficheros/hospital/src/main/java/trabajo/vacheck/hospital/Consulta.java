@@ -1,11 +1,15 @@
 package trabajo.vacheck.hospital;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Consulta {
 
-    private String IdConsultaMedica;
+    @Id
+    @GeneratedValue
+    private Integer IdConsultaMedica;
     private String CitaMedica;
     private String Enfermedad;
     private String Diagnostico;
@@ -28,12 +32,12 @@ public class Consulta {
     }
 
 
-    public String getIdConsultaMedica() {
+    public int getIdConsultaMedica() {
         return IdConsultaMedica;
     }
 
 
-    public void setIdConsultaMedica(String idConsultaMedica) {
+    public void setIdConsultaMedica(int idConsultaMedica) {
         IdConsultaMedica = idConsultaMedica;
     }
 
