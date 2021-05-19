@@ -2,16 +2,16 @@ package trabajo.vacheck.hospital;
 
 public class Hospital {
 
-    private String Dirección;
+    private String Direccion;
     private String Nombre;
     private int NumeroVacunados;
 
 
-    public String getDirección() {
-        return Dirección;
+    public String getDireccion() {
+        return Direccion;
     }
-    public void setDirección(String dirección) {
-        Dirección = dirección;
+    public void setDireccion(String direccion) {
+        Direccion = direccion;
     }
     public String getNombre() {
         return Nombre;
@@ -29,7 +29,7 @@ public class Hospital {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((Dirección == null) ? 0 : Dirección.hashCode());
+        result = prime * result + ((Direccion == null) ? 0 : Direccion.hashCode());
         result = prime * result + ((Nombre == null) ? 0 : Nombre.hashCode());
         result = prime * result + NumeroVacunados;
         return result;
@@ -43,10 +43,10 @@ public class Hospital {
         if (getClass() != obj.getClass())
             return false;
         Hospital other = (Hospital) obj;
-        if (Dirección == null) {
-            if (other.Dirección != null)
+        if (Direccion == null) {
+            if (other.Direccion != null)
                 return false;
-        } else if (!Dirección.equals(other.Dirección))
+        } else if (!Direccion.equals(other.Direccion))
             return false;
         if (Nombre == null) {
             if (other.Nombre != null)
