@@ -1,5 +1,8 @@
 package trabajo.vacheck.hospital;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Paciente {
 
     private String IdPaciente;

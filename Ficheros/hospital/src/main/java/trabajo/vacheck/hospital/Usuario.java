@@ -1,9 +1,12 @@
-package sistemasInteligentes;
+package trabajo.vacheck.hospital;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Usuario {
 	
 	//Atributos
-	private String nombre,sexo,calle,municipio,email,contraseña;
+	private String nombre,sexo,calle,municipio,email,contrasenia;
 	private int edad,telefono,codigoPostal;
 	private boolean estaVacunado;
 	

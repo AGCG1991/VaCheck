@@ -1,6 +1,9 @@
 package trabajo.vacheck.hospital;
 
-public class Sanitario extends sistemasInteligentes.Usuario {
+import javax.persistence.Entity;
+
+@Entity
+public class Sanitario extends trabajo.vacheck.hospital.Usuario {
     final private String IDsanitario;
 
     public Sanitario(String IDsan){

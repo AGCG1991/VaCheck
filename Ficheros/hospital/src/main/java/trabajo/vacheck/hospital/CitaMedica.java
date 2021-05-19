@@ -1,9 +1,10 @@
 package trabajo.vacheck.hospital;
 
+import javax.persistence.Entity;
 import java.util.Date;
 import java.util.Objects;
 
-@SuppressWarnings("ALL")
+@Entity
 public class CitaMedica {
 
     private String IdCita; //Identificador unico de la cita
