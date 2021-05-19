@@ -42,7 +42,7 @@ public class Hospital {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        hospital other = (hospital) obj;
+        Hospital other = (Hospital) obj;
         if (Dirección == null) {
             if (other.Dirección != null)
                 return false;
