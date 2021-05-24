@@ -2,10 +2,34 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Listado de consulta</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h1>Listado de consulta</h1>
-	<h2>consulta 1</h2>
+<h1>Lista de Consultas</h1>
+
+<table>
+
+<thead>
+	<tr><td>Id </td><td>Enfermedad</td><td>Diagnostico</td><td>Id Vacuna</td><td>Cita Medica</td></tr>
+
+</thead>
+
+				<tbody>
+				
+				<tr th:each="con :${ListaConsultas}">
+				<td th:text="${con.id}"></td>
+				<td th:text="${con.IdConsultaMedica}"></td>
+				<td th:text="${con.CitaMedica}"></td>
+				<td th:text="${con.Enfermedad}"></td>
+				<td th:text="${con.Diagnostico}"></td>
+				<td th:text="${con.VacunaId}"></td>
+				<td ><a th:href="@{/consulta/delete/{id}(id=${con.id})}">Borrar</a></td>
+				</tr>
+				
+
+				</tbody>
+
+</table>
+
 </body>
 </html>

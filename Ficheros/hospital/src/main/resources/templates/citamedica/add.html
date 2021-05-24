@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Listado de citas</title>
+</head>
+<body>
+	<div th:switch="${cita.IdCita}">
+		 	<h1 th:case = "null">Nueva cita</h1>
+			<h1 th:case = "*">Editando persona</h1>
+	</div>
+	<form th:action = "@{/citamedica/save}" method = "post" th:object="${cita}">
+		<input type="hidden" id="IdCita" th:field="*{IdCita}">
+		<div>
+			<label for = "fechaCita"> Fecha de la cita</label>
+			<input type = "date" id = "fechaCita" th:field = "*{fechaCita}">
+		</div>
+		<div>
+			<label for = "hospitalAsignado"> Hospital para asignar</label>
+			<input type = "text" id = "hospitalAsignado" th:field = "*{hospitalAsignado}">
+		</div>
+		<div>
+			<input type = "submit" value = "Enviar">
+		</div>
+	</form>
+</body>
+</html>

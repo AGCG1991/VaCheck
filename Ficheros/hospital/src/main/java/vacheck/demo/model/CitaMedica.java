@@ -1,13 +1,11 @@
 package vacheck.demo.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 import java.util.Objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 
 @Entity
@@ -15,6 +13,8 @@ public class CitaMedica {
 	@Id
 	@GeneratedValue
 	private Integer IdCita; // Identificador unico de la cita
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date fechaCita;
 	private String hospitalAsignado;
 
@@ -72,8 +72,7 @@ public class CitaMedica {
 
 	@Override
 	public String toString() {
-		return "CitaMedica{" + "IdCita='" + IdCita + '\'' + ", fechaCita=" + fechaCita + ", hospitalAsignado='"
-				+ hospitalAsignado + '\'' + '}';
+		return "Cita: " + IdCita;
 	}
 
 //	public void AltaCita(int anyo, int mes, int dia, int hr, int min) {
@@ -119,7 +118,7 @@ public class CitaMedica {
 	public void setConsulta_medica(Consulta consulta_medica) {
 		this.consulta_medica = consulta_medica;
 	}
-	
-	
+
+
 
 }

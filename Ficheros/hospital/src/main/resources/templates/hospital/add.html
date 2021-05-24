@@ -2,10 +2,33 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Listado de hospitales</title>
+<title>Listado de pacientes</title>
 </head>
 <body>
-	<h1>Añadir nuevo hospital</h1>
-	<h2>Hospital 1</h2>
+	<div th:switch="${hospital.id}">
+	<h1 th:case="null">Nuevo hospital</h1>
+	<h1 th:case="*">Editando hospital</h1>
+</div>
+
+
+	<form th:action="@{/hospital/save}" method="post" th:object="${hospital}">
+	<input type="hidden" id="id" th:field="*{id}">
+		<div>
+			<label for="Nombre">Nombre</label>
+			<input type="text" id="Nombre" th:field="*{Nombre}">
+		</div>
+		<div>
+			<label for="Direccion">direccion</label>
+			<input type="text" id="Direccion" th:field="*{Direccion}">
+		</div>
+		<div>
+			<label for="NumeroVacunados">numero de vacunados</label>
+			<input type="text" id="NumeroVacunados" th:field="*{NumeroVacunados}">
+		</div>
+		
+		<div>
+			<input type="submit" values="enviar">
+		</div>
+	</form>
 </body>
 </html>

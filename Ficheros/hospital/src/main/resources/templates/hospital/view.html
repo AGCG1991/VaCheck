@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de pacientes</title>
+</head>
+	<h1 th:text="${hospital}"></h1>
+	
+		<div>
+			<label for="Nombre">Nombre</label>
+			<span th:text="${hospital.Nombre}"></span>
+		</div>
+		<div>
+			<label for="Direccion">calle</label>
+			<span th:text="${hospital.Direccion}"></span>
+		</div>
+		
+		
+		<div>
+			<label for="NumeroVacunados">numero de vacunados</label>
+			<span th:text="${hospital.NumeroVacunados}"></span>
+		</div>
+		
+		
+		<div>
+			<span>Hospitales</span>
+		</div>
+		
+		
+		
+</body>
+</html>

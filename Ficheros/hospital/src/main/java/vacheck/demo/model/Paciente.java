@@ -2,10 +2,7 @@ package vacheck.demo.model;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 
 @Entity
@@ -19,6 +16,9 @@ public class Paciente {
 
 	@ManyToMany (mappedBy = "paciente")
 	private List <Consulta> consultas_paciente;
+
+	@OneToMany(mappedBy = "paciente")
+	private List <CitaMedica> citas_paciente;
 	
 	public Paciente () {
 		

@@ -6,6 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+
+import javax.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
+
 
 @Entity
 public class Usuario {
@@ -17,6 +23,8 @@ public class Usuario {
 	private String nombre, sexo, calle, municipio, email, contrasenya;
 	private int edad, telefono, codigoPostal;
 	private boolean estaVacunado;
+	@Temporal(TemporalType.DATE)
+    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
 	private Date fechaDeNacimiento;
 	
 	//-------------------------------------------------------------------------------
