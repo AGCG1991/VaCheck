@@ -67,9 +67,29 @@
 						</div>
 						<div class="row bx-fb bx-general ">
 							<div class="eleven columns">
-								<h2 class="titular-aviso">Gestor de Pacientes</h2>
-								<h1>Listado de pacientes</h1>
-								<h2>pacientes 1</h2>
+								<a th:href="@{/paciente/add}">Crear nueva persona </a>
+								<table>
+									<thead>
+										<tr>
+											<td>Nombre</td>
+											<td>Apellido</td>
+											<td>Id</td>
+											<td>Ha fallecido</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="p : ${listaPaciente}">
+											<td th:text="${p.nombre}"></td>
+											<td th:text="${p.apellido}"></td>
+											<td th:text="${p.id}"></td>
+											<td th:text="${p.HaFallecido}"></td>
+											<td><a th:href="@{/paciente/view/{id}(id=${p.id})}">Ver </a><a
+													th:href="@{/paciente/edit/{id}(id=${p.id})}">editar </a><a
+													th:href="@{/paciente/delete/{id}(id=${p.id})}">Borrar</a></td>
+										</tr>
+									</tbody>
+
+								</table>
 </body>
 
 

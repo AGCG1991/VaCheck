@@ -1,6 +1,7 @@
 package vacheck.demo.model;
 
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.*;
 
@@ -11,7 +12,7 @@ public class Paciente {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	private String IdPaciente;
+	private String nombre, apellido;
 	private boolean HaFallecido;
 
 	@ManyToMany (mappedBy = "paciente")
@@ -24,13 +25,21 @@ public class Paciente {
 		
 		
 	}
-	
-	public String getIdPaciente() {
-		return IdPaciente;
+
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setIdPaciente(String idPaciente) {
-		IdPaciente = idPaciente;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 
 	public boolean isHaFallecido() {
@@ -42,36 +51,21 @@ public class Paciente {
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (HaFallecido ? 1231 : 1237);
-		result = prime * result + ((IdPaciente == null) ? 0 : IdPaciente.hashCode());
-		return result;
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Paciente paciente = (Paciente) o;
+		return HaFallecido == paciente.HaFallecido && Objects.equals(id, paciente.id) && Objects.equals(consultas_paciente, paciente.consultas_paciente) && Objects.equals(citas_paciente, paciente.citas_paciente);
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Paciente other = (Paciente) obj;
-		if (HaFallecido != other.HaFallecido)
-			return false;
-		if (IdPaciente == null) {
-			if (other.IdPaciente != null)
-				return false;
-		} else if (!IdPaciente.equals(other.IdPaciente))
-			return false;
-		return true;
+	public int hashCode() {
+		return Objects.hash(id, HaFallecido, consultas_paciente, citas_paciente);
 	}
 
 	@Override
 	public String toString() {
-		return "Paciente " + IdPaciente;
+		return "Paciente " + id;
 	}
 
 	public Integer getId() {

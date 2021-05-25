@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="always">
-    <title>Listado de pacientes</title>
+    <title>Consultas médicas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -67,13 +67,53 @@
                         </div>
                         <div class="row bx-fb bx-general ">
                             <div class="eleven columns">
-                                <h2 class="titular-aviso">Listado de vacunas</h2>
 
-                                <h1 th:text="${persona}"></h1>
-                                <div>
-                                    <label for="marca">Marca</label>
-                                    <span th:text="${vacuna.marca}"></span>
-                                </div>
+
+                                <h1>Consultas</h1>
+
+                                <h1>Añadir Nueva Consulta</h1>
+                                <form th:action="@{/consulta/save}" method="post" th:object=${consulta}>
+
+                                    <div>
+                                        <label for="id">Id</label>
+
+                                        <input type="number" Id="id" th:field="*{id}">
+                                    </div>
+                                    <div>
+                                        <label for="IdConsultaMedica">Id Consulta Medica</label>
+
+                                        <input type="text" Id="IdConsultaMedica" th:field="*{IdConsultaMedica}">
+                                    </div>
+                                    <div>
+                                        <label for="CitaMedica">Cita Medica</label>
+
+                                        <input type="text" Id="CitaMedica" th:field="*{CitaMedica}">
+                                    </div>
+                                    <div>
+                                        <label for="Enfermedad">Enfermedad</label>
+
+                                        <input type="text" Id="Enfermedad" th:field="*{Enfermedad}">
+                                    </div>
+                                    <div>
+                                        <label for="Diagnostico">Diagnostico</label>
+
+                                        <textarea Id="Diagnostico" th:field="*{Diagnostico}"></textarea>
+                                    </div>
+                                    <div>
+                                        <label for="VacunaId">Vacuna Id</label>
+
+                                        <input type="text" Id="VacunaId" th:field="*{VacunaId}">
+
+                                    </div>
+
+                                    <div>
+
+                                        <input type="submit" value="Enviar">
+                                    </div>
+
+                                </form>
+
+
 </body>
 
 
