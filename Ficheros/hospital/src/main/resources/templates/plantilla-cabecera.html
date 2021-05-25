@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="always">
+    <title>VaCheck Gestor de Vacunación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-114x114precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-144x144-precomposed.png">
+    <link type="text/css" rel="stylesheet"
+        href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/eNp1jEEOwjAMBF9EuPMb190Kl6QutnOoxOMJJ5ArTtbO7Jqdbh5HhV8X3eLi5IXdX_zlBkdkOJEjs0WtndZB0ziZrs8OO0qXwmr4b2cK7MIPWO78mNGLO9rpTajWkD3jhs1phQllw1VGqn3-iDdj8W8t.css?ln=omnifaces.combined&amp;v=1620981106000">
+</head>
+
+<body class=" body-portada">
+
+    <div class="container">
+        <form id="frm-header" name="frm-header" method="post"
+            action="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/pages/portada2.jsf"
+            enctype="application/x-www-form-urlencoded" novalidate="novalidate">
+            <input type="hidden" name="frm-header" value="frm-header">
+
+            <div class="header ">
+
+
+                <div class="row u-w-90 hd-cs">
+
+                    <div class="eight columns u-relative"><a id="ImgConsejeriaDeSalud" name="ImgConsejeriaDeSalud"
+                            href="#" tabindex="1" title="Acceder al portal del Servicio Andaluz de Salud"
+                            target="_blank" class="logo-consejeria bx-hd "></a><a id="LnkClicSaludPlusHome"
+                            name="LnkClicSaludPlusHome" href="#" class="logo-clicSalud bx-hd logado " tabindex="2"
+                            title="ClicSalud+">
+                            <span class="pre">VaC</span>
+                            <span class="post">heck <i class="fas  fa-syringe"></i></span></a>
+
+                    </div>
+
+                    <div class="four columns">
+                        <div class="usuarioLogado bx-hd">
+                            <span class="usuario-logado" title="Identificado con certificado">
+                                <i class="fas fa-user" title="Identificado con certificado"></i>
+                                Pedro Sánchez
+                            </span><input id="ButtonCierreSesion" type="submit" name="ButtonCierreSesion" value=""
+                                tabindex="3" title="Cerrar sesión" class="bt-cierreSesion">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/jsf.js?ln=javax.faces"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/fixviewstate.js?ln=omnifaces&amp;v=1.14"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/lib/vendor/jquery-1.11.1.min.js?ln=csa"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/lib/vendor/jquery-ui.js?ln=csa"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/lib/vendor/jquery.ui.datepicker-es.js?ln=csa"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/lib/vendor/jquery-ui-timepicker-addon.js?ln=csa"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/lib/vendor/chosen.jquery.js?ln=csa"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/lib/vendor/jquery.meio.mask.min.js?ln=csa"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/lib/ajaxJsf.js?ln=csa"></script>
+                <script type="text/javascript"
+                    src="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/scripts/view/common-view.js?ln=csa"></script>
+
+
+                <script type="text/javascript">
+                    //<![CDATA[
+                    document.body.className = document.body.className.replace("no-javascript", "");
+                    window.onload = function () {
+                        try {
+                            document.getElementById('nameUrl').value = location.href;
+                        } catch (e) {
+
+                        }
+                    }
+
+                //]]>
+                </script>
+</body>
+
+</html>
