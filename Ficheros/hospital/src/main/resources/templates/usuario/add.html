@@ -127,6 +127,8 @@
 										<input type="submit" values="enviar">
 									</div>
 								</form>
+
+
 </body>
 
 
@@ -171,70 +173,6 @@
 
                 //]]>
 </script>
-</body>
-
-</html>
-<meta charset="ISO-8859-1">
-<title>Listado de pacientes</title>
-</head>
-
-<body>
-	<div th:switch="${usuario.id}">
-		<h1 th:case="null">Nueva Persona</h1>
-		<h1 th:case="*">Editando persona</h1>
-	</div>
-	<form th:action="@{/usuario/save}" method="post" th:object="${usuario}">
-		<input type="hidden" id="id" th:field="*{id}">
-		<div>
-			<label for="nombre">Nombre</label>
-			<input type="text" id="nombre" th:field="*{nombre}">
-		</div>
-		<div>
-			<label for="calle">calle</label>
-			<input type="text" id="calle" th:field="*{calle}">
-		</div>
-		<div>
-			<label for="sexo">sexo</label>
-			<input type="text" id="sexo" th:field="*{sexo}">
-		</div>
-		<div>
-			<label for="municipio">municipio</label>
-			<input type="text" id="municipio" th:field="*{municipio}">
-		</div>
-		<div>
-			<label for="email">email</label>
-			<input type="text" id="email" th:field="*{email}">
-		</div>
-		<div>
-			<label for="contrasenya">contrasenya</label>
-			<input type="password" id="contrasenya" th:field="*{contrasenya}">
-		</div>
-		<div>
-			<label for="edad">edad</label>
-			<input type="text" id="edad" th:field="*{edad}">
-		</div>
-		<div>
-			<label for="telefono">telefono</label>
-			<input type="text" id="telefono" th:field="*{telefono}">
-		</div>
-		<div>
-			<label for="codigoPostal">codigoPostal</label>
-			<input type="text" id="codigoPostal" th:field="*{codigoPostal}">
-		</div>
-		<div>
-			<label for="estaVacunado">estaVacunado</label>
-			<input type="checkbox" id="estaVacunado" th:field="*{estaVacunado}">
-		</div>
-		<div>
-			<label for="fechaDeNacimiento">fechaDeNacimiento</label>
-			<input type="date" id="fechaDeNacimiento" th:field="*{fechaDeNacimiento}">
-		</div>
-
-
-		<div>
-			<input type="submit" values="enviar">
-		</div>
-	</form>
 </body>
 
 </html>
