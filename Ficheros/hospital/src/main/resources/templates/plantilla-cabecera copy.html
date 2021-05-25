@@ -67,55 +67,12 @@
                         </div>
                         <div class="row bx-fb bx-general ">
                             <div class="eleven columns">
-                                <h2 class="titular-aviso">Gestor de Pacientes</h2>
-                                <h1 th:text="${usuario}"></h1>
+                                <h2 class="titular-aviso">Listado de vacunas</h2>
 
+                                <h1 th:text="${persona}"></h1>
                                 <div>
-                                    <label for="nombre">Nombre</label>
-                                    <span th:text="${usuario.nombre}"></span>
-                                </div>
-                                <div>
-                                    <label for="calle">calle</label>
-                                    <span th:text="${usuario.calle}"></span>
-                                </div>
-                                <div>
-                                    <label for="sexo">sexo</label>
-                                    <sapn th:text="${usuario.sexo}"></span>
-                                </div>
-                                <div>
-                                    <label for="municipio">municipio</label>
-                                    <span th:text="${usuario.municipio}"></span>
-                                </div>
-                                <div>
-                                    <label for="email">email</label>
-                                    <span th:text="${usuario.email}"></span>
-                                </div>
-                                <div>
-                                    <label for="contrasenya">contrasenya</label>
-                                    <span th:text="${usuario.contrasenya}"></span>
-                                </div>
-                                <div>
-                                    <label for="edad">edad</label>
-                                    <span th:text="${usuario.edad}"></span>
-                                </div>
-                                <div>
-                                    <label for="telefono">telefono</label>
-                                    <span th:text="${usuario.telefono}"></span>
-                                </div>
-                                <div>
-                                    <label for="codigoPostal">codigoPostal</label>
-                                    <span th:text="${usuario.codigoPostal}"></span>
-                                </div>
-                                <div>
-                                    <label for="estaVacunado">estaVacunado</label>
-                                    <span th:text="${usuario.estaVacunado}"></span>
-                                </div>
-                                <div>
-                                    <label for="fechaDeNacimiento">fechaDeNacimiento</label>
-                                    <span th:text="${#dates.format(usuario.fechaDeNacimiento, 'dd-MM-yyyy')}"></span>
-                                </div>
-                                <div>
-                                    <span>Usuarios</span>
+                                    <label for="marca">Marca</label>
+                                    <span th:text="${vacuna.marca}"></span>
                                 </div>
 </body>
 
