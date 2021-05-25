@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Listado de citas</title>
+</head>
+<body>
+		<h1 th:text = "${cita}"></h1>
+		<div>
+			<label for = "fechaCita"> Fecha de la cita</label>
+			<span th:text = "${#dates.format(cita.fechaCita, 'dd-MM-yyyy')}"></span>
+		</div>
+		<div>
+			<label for = "hospitalAsignado"> Hospital para asignar</label>
+			<span th:text = "${cita.hospitalAsignado}"></span>
+		</div>
+	</form>
+</body>
+</html>

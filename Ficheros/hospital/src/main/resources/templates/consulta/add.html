@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Añadir Nueva Consulta</h1>
+	<form th:action= "@{/consulta/save}" method="post" th:object=${consulta}>
+	
+		<div>
+				<label for="id">Id</label>
+				
+				<input type="number" Id="id" th:field="*{id}">	
+		</div>	
+		<div>
+				<label for="IdConsultaMedica">Id Consulta Medica</label>
+				
+				<input type="text" Id="IdConsultaMedica"th:field="*{IdConsultaMedica}">	
+		</div>	
+		<div>
+				<label for="CitaMedica">Cita Medica</label>
+				
+				<input type="text" Id="CitaMedica" th:field="*{CitaMedica}">	
+		</div>	
+		<div>
+				<label for="Enfermedad">Enfermedad</label>
+				
+				<input type="text" Id="Enfermedad"th:field="*{Enfermedad}">	
+		</div>	
+		<div>
+				<label for="Diagnostico">Diagnostico</label>
+				
+				<textarea  Id="Diagnostico" th:field="*{Diagnostico}"></textarea>	
+		</div>	
+		<div>
+				<label for="VacunaId">Vacuna Id</label>
+				
+				<input type="text" Id="VacunaId"th:field="*{VacunaId}">	
+				
+		</div>	
+		
+		<div>
+				
+				<input type="submit" value="Enviar">	
+		</div>	
+		
+	</form>
+
+</body>
+</html>

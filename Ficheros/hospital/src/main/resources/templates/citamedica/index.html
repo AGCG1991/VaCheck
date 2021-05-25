@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Listado de citas</title>
+</head>
+<body>
+	<h1>Listado de citas</h1>
+	<a th:href="@{/citamedica/add}">Añadir nueva persona</a>
+	<table>
+		<thead>
+		<tr><td>Id</td>
+		<td>Fecha de la cita<td>
+		<td>Hospital asignado</td>
+		</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "ci : ${listaCitas}">
+				<td th:text = "${ci.IdCita}"></td>
+				<td th:text = "${ci.fechaCita}"></td><td> </td>
+				<td th:text = "${ci.hospitalAsignado}"></td>
+				<td><a th:href="@{/citamedica/view/{IdCita}(IdCita = ${ci.IdCita})}">Ver  </a><a th:href="@{/citamedica/edit/{IdCita}(IdCita = ${ci.IdCita})}">Editar  </a><a th:href="@{/citamedica/delete/{IdCita}(IdCita = ${ci.IdCita})}">Borrar</a> </td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
