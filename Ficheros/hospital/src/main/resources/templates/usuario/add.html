@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html>
 
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeLeaf.org">
+
 <head>
-	<!DOCTYPE html>
-	<html lang="en">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="referrer" content="always">
+	<title>Listado de usuarios</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="shortcut icon" type="image/x-icon"
+		href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72"
+		href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114"
+		href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-114x114precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144"
+		href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-144x144-precomposed.png">
+	<link type="text/css" rel="stylesheet"
+		href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/eNp1jEEOwjAMBF9EuPMb190Kl6QutnOoxOMJJ5ArTtbO7Jqdbh5HhV8X3eLi5IXdX_zlBkdkOJEjs0WtndZB0ziZrs8OO0qXwmr4b2cK7MIPWO78mNGLO9rpTajWkD3jhs1phQllw1VGqn3-iDdj8W8t.css?ln=omnifaces.combined&amp;v=1620981106000">
+	<style>
+		body {
+			font-size: 14px;
+			line-height: 1.6;
+			font-family: Open Sans, Arial;
+			height: 100%;
+			color: #46515F;
+			background: #fff;
+		}
+	</style>
 
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="referrer" content="always">
-		<title>Listado de usuarios</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-			crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="shortcut icon" type="image/x-icon"
-			href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/favicon.ico">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72"
-			href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-72x72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114"
-			href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-114x114precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144"
-			href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/apple-touch-icon-144x144-precomposed.png">
-		<link type="text/css" rel="stylesheet"
-			href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/javax.faces.resource/eNp1jEEOwjAMBF9EuPMb190Kl6QutnOoxOMJJ5ArTtbO7Jqdbh5HhV8X3eLi5IXdX_zlBkdkOJEjs0WtndZB0ziZrs8OO0qXwmr4b2cK7MIPWO78mNGLO9rpTajWkD3jhs1phQllw1VGqn3-iDdj8W8t.css?ln=omnifaces.combined&amp;v=1620981106000">
-		<style>
-			body {
-				font-size: 14px;
-				line-height: 1.6;
-				font-family: Open Sans, Arial;
-				height: 100%;
-				color: #46515F;
-				background: #fff;
-			}
-		</style>
-
-	</head>
+</head>
 
 <body class=" body-portada">
 
