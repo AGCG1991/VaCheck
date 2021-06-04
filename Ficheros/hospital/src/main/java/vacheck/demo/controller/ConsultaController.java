@@ -51,7 +51,7 @@ public class ConsultaController {
 	public String editConsulta(@PathVariable("id") Integer id,Model model) {
 		model.addAttribute("consulta",consultaService.getById(id));
 		
-		return "consulta/edit";
+		return "consulta/index";
 	}
 	
 	
