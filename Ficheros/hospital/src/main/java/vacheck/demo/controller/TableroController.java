@@ -1,7 +1,9 @@
 package vacheck.demo.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import vacheck.demo.model.CitaMedica;
 
 @Controller
 public class TableroController {
@@ -10,4 +12,8 @@ public class TableroController {
     {
         return "tablero/dashboard";
     }
+
+
+
+
 }
