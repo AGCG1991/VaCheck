@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de usuarios</title>
+</head>
+<body>
+
+	<a th:href="@{/usuario/add}">Crear nueva persona </a>
+	<table>
+		<thead>
+			<tr><td>Nombre</td><td>Email</td></tr>
+		</thead>
+		<tbody>
+			<tr th:each="u : ${listaUsuario}">
+				<td th:text="${u.nombre}"></td>
+				<td th:text="${u.email}" ></td>
+				<td ><a th:href="@{/usuario/view/{id}(id=${u.id})}">Ver  </a><a th:href="@{/usuario/edit/{id}(id=${u.id})}">editar </a><a th:href="@{/usuario/delete/{id}(id=${u.id})}">Borrar</a></td>
+			</tr>
+		</tbody>
+		
+	</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de pacientes</title>
+</head>
+	<h1 th:text="${paciente}"></h1>
+
+		<div>
+			<label for="id">Id Paciente</label>
+			<span th:text="${paciente.id}"></span>
+		</div>
+		<div>
+			<label for="nombre">Nombre del paciente</label>
+			<span th:text="${paciente.nombre}"></span>
+		</div>
+		<div>
+			<label for="apellido">Apellido del paciente</label>
+			<span th:text="${paciente.apellido}"></span>
+		</div>
+		
+		<div>
+			<label for="HaFallecido">HaFallecido</label>
+			<span th:text="${paciente.HaFallecido}"></span>
+		</div>
+		
+		<div>
+			<span>Pacientes</span>
+		</div>
+		
+	
+</body>
+</html>
