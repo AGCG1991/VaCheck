@@ -11,24 +11,24 @@ import java.util.List;
 @Controller
 public class SanitarioController {
 
-    @RequestMapping("/Sanitario")
+    @RequestMapping("/sanitario")
     public String listadoSanitario(){
         List<Sanitario> Sanitario = new ArrayList<>();
 
-        return "Sanitario/index";
+        return "sanitario/index";
     }
 
-    @RequestMapping("/Sanitario/add")
+    @RequestMapping("/sanitario/add")
     public String addSanitario(Model model){
-        return("Sanitario/add");
+        return("sanitario/add");
     }
 
-    @RequestMapping("/Sanitario/edit/{id}")
+    @RequestMapping("/sanitario/edit/{id}")
     public String editSanitario(Model model){
-        return("Sanitario/edit");
+        return("sanitario/edit");
     }
 
-    @RequestMapping("/Sanitario/delete/{id}")
+    @RequestMapping("/sanitario/delete/{id}")
     public String deleteSanitario(){
         return listadoSanitario();
     }

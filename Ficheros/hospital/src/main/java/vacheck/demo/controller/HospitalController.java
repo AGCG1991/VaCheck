@@ -47,7 +47,7 @@ public class HospitalController {
 	@RequestMapping("/hospital/edit/{id}")
 	public String edithospital(@PathVariable("id") Integer id,Model model) {
 		model.addAttribute("usuario",hospitalService.getById(id));
-		return "hospital/add";
+		return "hospital/edit";
 	}
 
 	@RequestMapping("/hospital/view/{id}")

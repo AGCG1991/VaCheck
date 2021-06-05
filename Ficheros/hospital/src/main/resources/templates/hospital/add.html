@@ -66,6 +66,7 @@
 
 					<form th:action="@{/hospital/save}" method="post" th:object="${hospital}">
 						<input type="hidden" id="id" th:field="*{id}">
+
 						<div>
 							<label for="Nombre">Nombre</label>
 							<input type="text" id="Nombre" th:field="*{Nombre}">
@@ -75,7 +76,6 @@
 							<label for="Direccion">Direccion</label>
 							<input type="text" id="Direccion" th:field="*{Direccion}">
 						</div>
-
 
 						<div>
 							<label for="NumeroVacunados">Numero de vacunados</label>

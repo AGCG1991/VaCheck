@@ -67,15 +67,13 @@
 							<td>Vacunados</td>
 						</tr>
 						</thead>
+
 						<tbody>
 						<tr th:each="u : ${listaHospital}">
 							<td th:text="${u.Nombre}"></td>
 							<td th:text="${u.Direccion}"></td>
 							<td th:text="${u.NumeroVacunados}"></td>
-
-							<td></td>
-
-
+							<td>  </td>
 							<td>
 								<a th:href="@{/hospital/view/{id}(id=${u.id})}">Ver </a>
 								<a th:href="@{/hospital/edit/{id}(id=${u.id})}">editar </a>
