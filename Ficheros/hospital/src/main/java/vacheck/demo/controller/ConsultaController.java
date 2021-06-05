@@ -47,12 +47,11 @@ public class ConsultaController {
 	
 
 	
-	@RequestMapping("/consulta/edit/{id}")
-	public String editConsulta(@PathVariable("id") Integer id,Model model) {
-		model.addAttribute("consulta",consultaService.getById(id));
-		
-		return "consulta/index";
-	}
+	 @RequestMapping("/consulta/edit/{id}")
+	    public String editConsulta(@PathVariable("id") Integer id, Model model) {
+	        model.addAttribute("consulta", consultaService.getById(id));
+	        return "consulta/add";
+	    }
 	
 	
 	@RequestMapping("/consulta/delete/{id}")

@@ -37,11 +37,11 @@ public class VacunaController {
         return "vacuna/index";
     }
 
+
     @RequestMapping("/vacuna/add")
-    public String addVacunas(Model model) {
-    	
-    	
-       return "vacuna/add";
+    public String addConsulta(Model model) {
+        model.addAttribute("vacuna", new Vacuna());
+        return "vacuna/add";
     }
 
     @RequestMapping("/vacuna/edit/{id}")
