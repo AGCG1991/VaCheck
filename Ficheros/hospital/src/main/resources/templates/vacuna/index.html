@@ -57,36 +57,31 @@
 				<div class="eleven columns">
 
 					<!-- COMIENZO -->
-					
-					<h1>Lista de Vacunas</h1>
-					<a th:href="@{/vacuna/add}">Añadir nueva vacuna</a>
+					<a th:href="@{/vacuna/add}">Crear nueva vacuna </a>
 					<table>
-
 						<thead>
 						<tr>
-							<td>Id </td>
+							<td>Id</td>
 							<td>Marca</td>
-							<td>Dosis en Stock</td>
+							<td>Dosis</td>
+							
 						</tr>
-
 						</thead>
-
 						<tbody>
+						<tr th:each="p : ${listaVacunas}">
+							<td th:text="${p.id}"></td>
+							<td th:text="${p.marca}"></td>
+							<td th:text="${p.dosisenstock}"></td>
 
-						<tr th:each="con :${ListaVacunas}">
-							<td th:text="${con.id}"></td>
-							<td th:text="${con.marca}"></td>
-							<td th:text="${con.dosisenstock}"></td>
 
-							<td><a th:href="@{/vacuna/edit/{id}(id=${con.id})}">Editar</a></td>
-							<td><a th:href="@{/vacuna/delete/{id}(id=${con.id})}">Borrar</a></td>
+
+							<td><a th:href="@{/vacuna/view/{id}(id=${p.id})}">Ver </a><a
+									th:href="@{/vacuna/edit/{id}(id=${p.id})}">editar </a><a
+									th:href="@{/vacuna/delete/{id}(id=${p.id})}">Borrar</a></td>
 						</tr>
-
-
 						</tbody>
 
 					</table>
-
 					<!-- TERMINO -->
 				</div>
 			</div>
