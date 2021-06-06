@@ -39,7 +39,7 @@ public class SanitarioController {
 
     @RequestMapping("/sanitario/add")
     public String addSanitario(Model model) {
-        model.addAttribute("sanitario", new Sanitario());
+        model.addAttribute("sanitario", new vacheck.demo.service.SanitarioService());
         return "sanitario/add";
     }
 

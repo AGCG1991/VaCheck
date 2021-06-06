@@ -74,9 +74,9 @@
 						<tbody>
 
 						<tr th:each="con :${ListaVacunas}">
-							<td th:text="${vacuna.id}"></td>
-							<td th:text="${vacuna.marca}"></td>
-							<td th:text="${vacuna.dosisenstock}"></td>
+							<td th:text="${con.id}"></td>
+							<td th:text="${con.marca}"></td>
+							<td th:text="${con.dosisenstock}"></td>
 
 							<td><a th:href="@{/vacuna/edit/{id}(id=${con.id})}">Editar</a></td>
 							<td><a th:href="@{/vacuna/delete/{id}(id=${con.id})}">Borrar</a></td>
