@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de sanitarios</title>
+</head>
+<body>
+	<div th:switch="${sanitario.id}">
+	<h1 th:case="null">Nuevo Sanitario</h1>
+</div>
+	<form th:action="@{/sanitario/save}" method="post" th:object="${sanitario}">
+	<input type="hidden" id="id" th:field="*{id}">
+		<div>
+			<label for="nombre">Nombre del sanitario</label>
+			<input type="text" id="nombre" th:field="*{nombre}">
+		</div>
+		<div>
+			<label for="apellido">Apellidos del sanitario</label>
+			<input type="text" id="apellido" th:field="*{apellido}">
+		</div>
+		<div>
+			<label for="id">ID de Sanitario</label>
+			<input type="text" id="id" th:field="*{id}">
+		</div>
+		
+		<div>
+			<input type="submit" values="enviar">
+		</div>
+	</form>
+</body>
+</html>
