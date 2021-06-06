@@ -38,10 +38,10 @@
 
 			<div class="four columns">
 				<div class="usuarioLogado bx-hd">
-						<span class="usuario-logado" title="Identificado con certificado">
+                        <span class="usuario-logado" title="Identificado con certificado">
 
-							Usuario Conectado
-						</span><input id="ButtonCierreSesion" type="submit" name="ButtonCierreSesion" value=""
+                            Usuario Conectado
+                        </span><input id="ButtonCierreSesion" type="submit" name="ButtonCierreSesion" value=""
 									  tabindex="3" title="Cerrar sesión" class="bt-cierreSesion">
 				</div>
 			</div>
@@ -49,23 +49,49 @@
 
 		<div class="content ">
 
-			<div class="row u-w-90 ">
-				<div id="bloque-messages-user" class="bx-mensajes "></div>
-			</div>
+				<div class="row u-w-90 ">
+					<div id="bloque-messages-user" class="bx-mensajes "></div>
+				</div>
 
-			<div class="row bx-fb bx-general ">
-
-
-				<!-- COMIENZO -->
-
-				<h1>Listado de sanitarios</h1>
-				<h2>Sanitario 1</h2>
+				<div class="row bx-fb bx-general ">
 
 
-				<!-- TERMINO -->
+						<!-- COMIENZO -->
 
-			</div>
+						<h1>Listado de Sanitarios</h1>
+						<a th:href="@{/Sanitario/add}">Añadir nuevo Sanitario</a>
+						<table>
+							<thead>
+							<tr>
+								<td>Id</td>
+							</tr>
+							</thead>
+							<tbody>
+							<tr th:each="ci : ${listaSanitarios}">
+								<td th:text="${ci.IDsanitario}"></td>
+								<td> </td
+								<td>
+									<a th:href="@{/sanitario/view/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Ver </a>
+									<a th:href="@{/sanitario/edit/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Editar </a>
+									<a th:href="@{/sanitario/delete/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Borrar</a> </td>
+							</tr>
+						</table>
+						<!-- TERMINO -->
+
+				</div>
+
+
+
+
+
+
+
+
 
 </body>
+
+
+
+
 
 </html>
