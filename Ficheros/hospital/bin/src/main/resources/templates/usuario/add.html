@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeLeaf.org">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="referrer" content="always">
+	<title>Consultas médicas</title>
+
+	<link rel="stylesheet" href="/css/styles.css" th.href="@{/css/styles.css}">
+
+</head>
+
+<body class=" body-portada">
+<div class="container  ">
+
+	<input type="hidden" name="frm-header" value="frm-header">
+
+	<div class=" cabecera-camarada header ">
+
+
+		<div class="row u-w-90 hd-cs">
+
+			<div class="eight columns u-relative">
+				<a id="ImgConsejeriaDeSalud" name="ImgConsejeriaDeSalud" href="#"
+				   title="Acceder al portal del Servicio Andaluz de Salud" target="_blank"
+				   class="logo-consejeria bx-hd ">
+				</a>
+
+				<a id="LnkClicSaludPlusHome" name="LnkClicSaludPlusHome" href="#"
+				   class="logo-clicSalud bx-hd logado " tabindex="2.html" title="ClicSalud+">
+					<span class="pre">VaC</span>
+					<span class="post">heck <i class="fas  fa-syringe"></i></span>
+				</a>
+
+			</div>
+
+			<div class="four columns">
+				<div class="usuarioLogado bx-hd">
+                        <span class="usuario-logado" title="Identificado con certificado">
+
+                            Usuario Conectado
+                        </span><input id="ButtonCierreSesion" type="submit" name="ButtonCierreSesion" value=""
+									  tabindex="3" title="Cerrar sesión" class="bt-cierreSesion">
+				</div>
+			</div>
+		</div>
+
+		<div class="content ">
+
+			<div class="row u-w-90 ">
+				<div id="bloque-messages-user" class="bx-mensajes "></div>
+			</div>
+
+			<div class="row bx-fb bx-general ">
+				<div class="eleven columns">
+
+					<!-- COMIENZO -->
+					<div th:switch="${usuario.id}">
+						<h1 th:case="null">Nueva Persona</h1>
+						<h1 th:case="*">Editando persona</h1>
+					</div>
+					<form th:action="@{/usuario/save}" method="post" th:object="${usuario}">
+						<input type="hidden" id="id" th:field="*{id}">
+						<div>
+							<label for="nombre">Nombre</label>
+							<input type="text" id="nombre" th:field="*{nombre}">
+						</div>
+
+						<div>
+							<label for="municipio">Apellido</label>
+							<input type="text" id="municipio" th:field="*{municipio}">
+						</div>
+
+						<div>
+							<label for="calle">calle</label>
+							<input type="text" id="calle" th:field="*{calle}">
+						</div>
+
+						<div>
+							<label for="sexo">sexo</label>
+							<input type="text" id="sexo" th:field="*{sexo}">
+						</div>
+
+
+
+						<div>
+							<label for="email">email</label>
+							<input type="text" id="email" th:field="*{email}">
+						</div>
+
+						<div>
+							<label for="contrasenya">contrasenya</label>
+							<input type="password" id="contrasenya" th:field="*{contrasenya}">
+						</div>
+
+						<div>
+							<label for="edad">edad</label>
+							<input type="text" id="edad" th:field="*{edad}">
+						</div>
+
+						<div>
+							<label for="telefono">telefono</label>
+							<input type="text" id="telefono" th:field="*{telefono}">
+						</div>
+
+						<div>
+							<label for="codigoPostal">codigoPostal</label>
+							<input type="text" id="codigoPostal" th:field="*{codigoPostal}">
+						</div>
+
+						<div>
+							<label for="estaVacunado">estaVacunado</label>
+							<input type="checkbox" id="estaVacunado" th:field="*{estaVacunado}">
+						</div>
+
+						<div>
+							<label for="fechaDeNacimiento">fechaDeNacimiento</label>
+							<input type="date" id="fechaDeNacimiento" th:field="*{fechaDeNacimiento}">
+						</div>
+
+
+						<div>
+							<input type="submit" values="enviar">
+						</div>
+
+					</form>
+					<!-- TERMINO -->
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
