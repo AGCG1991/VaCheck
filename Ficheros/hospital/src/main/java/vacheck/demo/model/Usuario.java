@@ -48,6 +48,9 @@ public class Usuario {
 	}
 
 	public void setContrasenya(String contrasenya) {
+		if(contrasenya.length()<8) {
+			throw new RuntimeException("Minimo de 8 caracteres para la contraseña");
+		}
 		this.contrasenya = contrasenya;
 	}
 
@@ -97,13 +100,16 @@ public class Usuario {
 
 	// constructor
 	public Usuario() {
-
+		this.estaVacunado=false;
 	}
 	// --------------------------------------------------------
 
 	// getters and setter
 
 	public void setNombre(String nombre) {
+		if(nombre=="") {
+			throw new RuntimeException("Cadena vacia no valida");
+		}
 		this.nombre = nombre;
 	}
 

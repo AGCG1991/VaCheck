@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="always">
+    <title>VaCheck Gestor de Vacunación</title>
+    <link rel="stylesheet" href="/css/styles.css" th.href="@{/css/styles.css}">
+
+</head>
+
+
+
+<body class=" body-portada">
+
+
+    <div id="globalStatusAjax" class="globalStatusAjax">
+        <div id="wrapStatusAjaxLoading">
+            <div class="statusAjaxLoading">
+                Cargando...
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <form id="frm-header" name="frm-header" method="post"
+            action="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/pages/portada2.jsf"
+            enctype="application/x-www-form-urlencoded" novalidate="novalidate">
+            <input type="hidden" name="frm-header" value="frm-header">
+
+            <div class="header ">
+
+
+                <div class="row u-w-90 hd-cs">
+
+                    <div class="eight columns u-relative"><a id="ImgConsejeriaDeSalud" name="ImgConsejeriaDeSalud"
+                            href="#" tabindex="1" title="Acceder al portal del Servicio Andaluz de Salud"
+                            target="_blank" class="logo-consejeria bx-hd "></a><a id="LnkClicSaludPlusHome"
+                            name="LnkClicSaludPlusHome" href="#" class="logo-clicSalud bx-hd logado " tabindex="2"
+                            title="VaCheck">
+                            <span class="pre">VaC</span>
+                            <span class="post">heck <i class="fas  fa-syringe"></i></span></a>
+
+                    </div>
+
+                    <div class="four columns">
+                        <div class="usuarioLogado bx-hd">
+                            <span class="usuario-logado" title="Identificado con certificado">
+                                <i class="fas fa-user" title="Identificado con certificado"></i>
+                                Usuario Conectado
+                            </span><input id="ButtonCierreSesion" type="submit" name="ButtonCierreSesion" value=""
+                                tabindex="3" title="Cerrar sesión" class="bt-cierreSesion">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="content ">
+            <form id="frm-body" name="frm-body" method="post" action="" class="u-not-margin"
+                enctype="application/x-www-form-urlencoded" novalidate="novalidate">
+                <input type="hidden" name="frm-body" value="frm-body">
+
+
+                <div class="row u-w-90 ">
+                    <div id="bloque-messages-user" class="bx-mensajes "></div>
+                </div>
+                <div class="row bx-fb bx-general ">
+                    <div class="eleven columns">
+                        <h2 class="titular-aviso">Vacunación COVID-19</h2>
+                        <span>Pueden pedir cita para la <strong>primera dosis</strong> de vacunación las personas
+                            nacidas <strong>entre los años 1962 y 1967</strong> (de 54 a 59 años) y las de 68 años o
+                            más
+                            (<strong>nacidas en 1953 y años anteriores</strong>) independientemente de su
+                            aseguramiento
+                            (público, privado, mutualidad, etc). <br>
+                            Para ello, es necesario identificarse (con datos personales o con identificación segura)
+                            y
+                            después pulsar la opción Agenda Sanitaria/<strong>Pedir cita </strong>.
+                            <br>
+                            <a target="_blank"
+                                href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/ciudadania/consejos-de-salud/nuevo-coronavirus-informacion-sobre-la-alerta/vacunacion-covid-19/vacunacion-covid-19-citacion">Más
+                                información.</a>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div id="portada-ciudadano" class="portada-ciudadano row u-w-90  ">
+
+                    <div class="six columns">
+                        <div class="box-cell"><a id="linkAgendaPortadaImg" name="linkAgendaPortadaImg" href="#"
+                                class="i-button i-portada bg-agenda" tabindex="13" title="Ir a agenda"></a>
+                            <span class="portada-no-image i-button i-portada bg-agenda"></span>
+                        </div>
+                        <div class="box-cell">
+
+                            <h2 class="h2-titular">
+
+                                <a id="linkAgendaPortadaTexto" name="linkAgendaPortadaTexto" href="#" tabindex="14"
+                                    title="Ir a agenda">
+                                    Agenda sanitaria
+                                </a>
+                                <span class="h2-titular portada-not-link">Agenda sanitaria</span>
+
+
+                                <span class="info-cs info-cs-responsive"
+                                    data-toggle-class-name="u-hidden-responsive=>#bx-help-agenda"><em>i</em></span>
+                            </h2>
+                            <p id="bx-help-agenda" class="sublinea u-hidden-responsive">
+                                Puede solicitar cita en atención primaria, así como realizar determinadas gestiones
+                                sobre citas para asistencia hospitalaria y pruebas diagnósticas. También puede
+                                consultar
+                                su inscripción en la lista de espera quirúrgica.
+                            </p>
+                            <div class="lst lst-block">
+                                <a href="/citamedica" th:href="@{/citamedica}" tabindex="15" title="Ir a nueva cita">
+
+
+                                </a>
+                                <a href="/citamedica" th:href="@{/citamedica}" tabindex="15" title="Ir a nueva cita">
+
+
+                                </a><a href="/citamedica" th:href="@{/citamedica}" tabindex="15"
+                                    title="Ir a nueva cita">
+                                    Gestionar Cita
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="six columns">
+                        <div class="box-cell"><a id="toPortadaHistoriaImg" name="toPortadaHistoriaImg" href="#"
+                                class="i-button i-portada bg-salud" tabindex="18" title="Ir a salud"></a>
+                            <span class="portada-no-image i-button i-portada bg-salud"></span>
+
+                        </div>
+                        <div class="box-cell">
+                            <h2 class="h2-titular"><a id="toPortadaHistoriaTitular" name="toPortadaHistoriaTitular"
+                                    href="#" tabindex="19" title="Ir a salud">
+                                    Salud
+                                </a>
+                                <span class="h2-titular portada-not-link">Salud </span>
+
+
+                                <span class="info-cs info-cs-responsive"
+                                    data-toggle-class-name="u-hidden-responsive=>#bx-help-historia"><em>i</em></span>
+
+                            </h2>
+                            <p id="bx-help-historia" class="sublinea u-hidden-responsive">
+                                Permite consultar los datos de salud más relevantes registrados en su historia
+                                clínica
+                                electrónica, relacionarse con los profesionales que le atienden, e introducir
+                                información para el seguimiento de su salud.
+                            </p>
+                            <div class="lst lst-block"><a href="/consulta" th:href="@{/consulta}" tabindex="15"
+                                    title="Hisotorial Médico">
+                                    Historial Médico
+                                </a>
+                                <a id="toPruebasAnaliticasPortada" name="toPruebasAnaliticasPortada" href="#"
+                                    tabindex="23" title="Ir a pruebas analíticas">
+                                    Certificado de Vacunación
+                                </a>
+                                <a href="/vacuna" th:href="@{/vacuna}" tabindex="15" title="Lista Vacunas">
+
+                                    Vacunas</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portada-ciudadano row u-w-90">
+
+                    <div class="six columns">
+                        <div class="box-cell"><a id="toPortadaTramitesImg" name="toPortadaTramitesImg" href="#"
+                                class="i-button i-portada bg-tramites" tabindex="27" title="Ir a trámites"></a>
+                            <span class="portada-no-image i-button i-portada bg-tramites"></span>
+
+                        </div>
+                        <div class="box-cell">
+                            <h2 class="h2-titular"><a id="toPortadaTramitesTitular" name="toPortadaTramitesTitular"
+                                    href="#" tabindex="28" title="Ir a trámites">
+                                    Trámites
+
+                                </a>
+                                <span class="h2-titular portada-not-link">Trámites</span>
+                                <span class="info-cs info-cs-responsive"
+                                    data-toggle-class-name="u-hidden-responsive=>#bx-help-tramites"><em>i</em></span>
+
+                            </h2>
+                            <p id="bx-help-tramites" class="sublinea u-hidden-responsive">
+                                Puede realizar gestiones relacionadas con el acceso a los servicios sanitarios.
+                            </p>
+                            <div class="lst lst-block"><a id="toDesplazamientoTemporalPortada"
+                                    name="toDesplazamientoTemporalPortada" href="#" tabindex="30"
+                                    title="Ir a desplazamiento temporal">
+                                    Renovar tarjeta sanitaria
+                                </a><a id="toDesplazamientoTemporalPortada" name="toDesplazamientoTemporalPortada"
+                                    href="#" tabindex="30" title="Ir a desplazamiento temporal">
+                                    Formulario de seguimiento tras vacunación
+                                </a><a id="toEleccionCentroMedicoPortada" name="toEleccionCentroMedicoPortada" href="#"
+                                    tabindex="31" title="Ir a elegir centro/profesional">
+                                    Elección de centro y profesional
+                                </a>
+
+                                </a>
+                                <a href="/sanitario" th:href="@{/sanitario}" tabindex="15" title="Nuestro Equipo">
+                                    Nuestro Equipo
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="six columns">
+
+                        <div class="box-cell"><a id="toPortadaDatosPersonalesImg" name="toPortadaDatosPersonalesImg"
+                                href="#" class="i-button i-portada bg-datos-usuario" tabindex="33"
+                                title="Ir a los datos personales"></a>
+                            <span class="portada-no-image i-button i-portada bg-datos-usuario"></span>
+                        </div>
+                        <div class="box-cell">
+                            <h2 class="h2-titular"><a id="toPortadaDatosPersonalesPortada"
+                                    name="toPortadaDatosPersonalesPortada" href="#" tabindex="34"
+                                    title="Ir a los datos personales">
+                                    Datos personales
+                                </a>
+                                <span class="h2-titular portada-not-link">Datos personales </span>
+
+                                <span class="info-cs info-cs-responsive"
+                                    data-toggle-class-name="u-hidden-responsive=>#bx-help-datos-usuario"><em>i</em></span>
+                            </h2>
+                            <p id="bx-help-datos-usuario" class="sublinea u-hidden-responsive">
+                                Permite comprobar – y en algunos casos actualizar – la información básica recogida
+                                en la
+                                Base de Datos del Sistema Sanitario Público de Andalucía.
+                            </p>
+                            <div class="lst lst-block"><a href="/paciente" th:href="@{/paciente}" tabindex="15"
+                                    title="Datos Médicos">
+
+                                    Datos administrativos
+                                </a><a href="/usuario" th:href="@{/usuario}" tabindex="15" title="Datos Contacto">
+
+                                    Datos de contacto
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+        </div>
+
+    </div>
+    <!-- EMPIEZA EL FOOTER -->
+    <div class="footer">
+        <div class="row u-w-90">
+            <div class="four columns lst lst-block"><a id="QueEsClcSaludExt" name="QueEsClcSaludExt" href="#"
+                    title="Ir a qué es VaCheck">
+                    Qué es VaCheck
+                </a>
+
+
+                <a id="PreguntasFrecuentesExt" href="#" target="_blank" title="Ir a Preguntas frecuentes">
+                    Preguntas frecuentes
+                    <i class="fas  fa-syringe"></i>
+
+                </a>
+
+
+                <a id="PrivacidadAccesibilidadExt" href="#" target="_blank" title="Ir a Política de privacidad">
+                    Sistema de Vacunación
+                    <i class="fas  fa-syringe"></i>
+                </a>
+            </div>
+            <div class="four columns lst lst-block"><a id="accesibilidad" name="accesibilidad"
+                    href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/pages/ciudadano/ayuda/accesibilidad.jsf"
+                    title="Ir a  Accesibilidad ">
+                    Vacunas
+                </a>
+
+
+                <a id="CertificadoDigitalExt"
+                    href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/ciudadania/clicsalud/acceso-e-identificacion-en-clicsalud"
+                    title="Ir a Certificado digital/DNIe" target="_blank">Conexión a Vacheck
+                    <i class="fas  fa-syringe"></i>
+                </a>
+
+
+
+                <a id="centrosSanitariosExt"
+                    href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/el-sas/servicios-y-centros/informacion-por-centros"
+                    title="Ir a Centros sanitarios" target="_blank">
+                    Centros sanitarios
+                    <i class="fas  fa-syringe"></i>
+                </a>
+            </div>
+
+            <div class="four columns lst lst-block">
+
+                <a id="atencionCiudadanaExt"
+                    href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/ciudadania" target="_blank"
+                    title="Ir a Atención a la ciudadanía">
+                    Atención a la ciudadanía
+                    <i class="fas  fa-syringe"></i>
+                </a>
+
+                <a id="appSaludRespondeExt"
+                    href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/ciudadania/app-salud-andalucia"
+                    title="Ir a App Salud Andalucía" target="_blank">App Salud Andalucía
+                    <i class="fas  fa-syringe"></i>
+                </a>
+
+                <a id="SugerenciasComentariosClcSalud"
+                    href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/contacto/sugerencias/registro?idp=4A36EE9174873%7C2BB345%7C146AD2&amp;ctrl=[51532161138551]"
+                    target="_blank" title="Ir a Sugerencias y comentarios">
+                    Sugerencias y comentarios
+                    <i class="fas  fa-syringe"></i>
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+        </script>
+
+</body>
+
+</html>
