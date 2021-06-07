@@ -20,9 +20,7 @@ public class Sanitario  {
     @OneToMany (mappedBy = "sanitario_cita")
     private List <CitaMedica> cita_sanitaria;
     
-    public Sanitario(Integer x){
-        IDsanitario = x;
-    }
+    public Sanitario(){ }
 
     public Integer getIDsanitario() {
         return IDsanitario;

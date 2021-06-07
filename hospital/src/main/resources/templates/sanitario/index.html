@@ -59,7 +59,7 @@
 						<!-- COMIENZO -->
 
 						<h1>Listado de Sanitarios</h1>
-						<a th:href="@{/Sanitario/add}">Añadir nuevo Sanitario</a>
+						<a th:href="@{/sanitario/add}">Añadir nuevo Sanitario</a>
 						<table>
 							<thead>
 							<tr>
@@ -69,7 +69,7 @@
 							<tbody>
 							<tr th:each="ci : ${listaSanitarios}">
 								<td th:text="${ci.IDsanitario}"></td>
-								<td> </td
+								<td> </td>
 								<td>
 									<a th:href="@{/sanitario/view/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Ver </a>
 									<a th:href="@{/sanitario/edit/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Editar </a>
