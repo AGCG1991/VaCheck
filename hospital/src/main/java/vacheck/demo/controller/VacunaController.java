@@ -48,7 +48,7 @@ public class VacunaController {
     @RequestMapping("/vacuna/edit/{id}")
     public String editVacunas(@PathVariable("id") Integer id,Model model) {
     	model.addAttribute("vacuna",vacunaService.getById(id));
-        return "vacuna/index";
+        return "vacuna/add";
     }
 
     @RequestMapping("/vacuna/delete/{id}")
