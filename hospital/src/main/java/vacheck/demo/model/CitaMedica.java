@@ -20,15 +20,15 @@ public class CitaMedica {
 
 	// Método constructor
 
-	@ManyToOne 
+	@ManyToOne
 	private Paciente paciente;
-	
+
 	@ManyToOne
 	private Sanitario sanitario_cita;
-	
+
 	@OneToOne
 	private Consulta consulta_medica;
-	
+
 	public CitaMedica() {
 
 	}
@@ -40,6 +40,9 @@ public class CitaMedica {
 	}
 
 	public void setIdCita(Integer idCita) {
+		if((idCita < 0) || (idCita == null)) {
+			throw new RuntimeException("ID de la cita no valido.");
+		}
 		IdCita = idCita;
 	}
 
@@ -48,6 +51,9 @@ public class CitaMedica {
 	}
 
 	public void setFechaCita(Date fechaCita) {
+		if(fechaCita == null) {
+			throw new RuntimeException("No hay fecha asignada.");
+		}
 		this.fechaCita = fechaCita;
 	}
 
@@ -92,6 +98,9 @@ public class CitaMedica {
 	}
 
 	public void setHospitalAsignado(String hospitalAsignado) {
+		if(hospitalAsignado == "") {
+			throw new RuntimeException("No hay hospital asignado.");
+		}
 		this.hospitalAsignado = hospitalAsignado;
 	}
 

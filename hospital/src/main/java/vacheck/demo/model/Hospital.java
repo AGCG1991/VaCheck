@@ -15,18 +15,18 @@ public class Hospital {
 	private String Direccion;
 	private String Nombre;
 	private int NumeroVacunados;
-	
-	
+
+
 	//---------------------------------------------------------------------------------------------------------
 	@OneToMany (mappedBy ="hospital")																		//-
 	private List<Usuario> usuarios_Hospital;																//-
 	//---------------------------------------------------------------------------------------------------------
-	
+
 	public Hospital() {
-		
-		
+
+
 	}
-	
+
 	public String getDireccion() {
 		return Direccion;
 	}
@@ -40,7 +40,10 @@ public class Hospital {
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		if(nombre=="") {
+			throw new RuntimeException("Cadena vacia no valida");
+		}
+		this.Nombre = nombre;
 	}
 
 	public int getNumeroVacunados() {
@@ -48,7 +51,10 @@ public class Hospital {
 	}
 
 	public void setNumeroVacunados(int numeroVacunados) {
-		NumeroVacunados = numeroVacunados;
+		if(numeroVacunados<0) {
+			throw new RuntimeException("El numero de vacunados debe ser positivo");
+		}
+		this.NumeroVacunados = numeroVacunados;
 	}
 
 	@Override
@@ -117,6 +123,6 @@ public class Hospital {
 		this.usuarios_Hospital = usuarios_Hospital;
 	}
 
-	
-	
+
+
 }

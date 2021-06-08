@@ -21,16 +21,16 @@ public class Consulta {
 	private String Enfermedad;
 	private String Diagnostico;
 	private String VacunaId;
-	
-     @ManyToMany 
-     private List<Paciente> paciente;
-     
-     
-     @ManyToOne
-     private Sanitario sanitario;
-     
-     @OneToOne (mappedBy = "consulta_medica")
- 	 private CitaMedica cita_medica;
+
+	@ManyToMany
+	private List<Paciente> paciente;
+
+
+	@ManyToOne
+	private Sanitario sanitario;
+
+	@OneToOne (mappedBy = "consulta_medica")
+	private CitaMedica cita_medica;
 
 	public Consulta() {
 
@@ -40,12 +40,20 @@ public class Consulta {
 
 	}
 
+
+
 	public String getIdConsultaMedica() {
 		return IdConsultaMedica;
 	}
 
 	public void setIdConsultaMedica(String idConsultaMedica) {
-		IdConsultaMedica = idConsultaMedica;
+
+		if(idConsultaMedica=="") {
+
+			throw new RuntimeException("Cadena vacia no valida");
+		}else {
+			IdConsultaMedica = idConsultaMedica;
+		}
 	}
 
 	public String getCitaMedica() {
@@ -53,7 +61,14 @@ public class Consulta {
 	}
 
 	public void setCitaMedica(String citaMedica) {
-		CitaMedica = citaMedica;
+
+		if(citaMedica=="") {
+
+			throw new RuntimeException("Cadena vacia no valida");
+		}else {
+
+			CitaMedica = citaMedica;
+		}
 	}
 
 	public String getEnfermedad() {
@@ -61,7 +76,14 @@ public class Consulta {
 	}
 
 	public void setEnfermedad(String enfermedad) {
-		Enfermedad = enfermedad;
+
+
+		if(enfermedad=="") {
+
+			throw new RuntimeException("Cadena vacia no valida");
+		}else {
+			Enfermedad = enfermedad;
+		}
 	}
 
 	public String getDiagnostico() {
@@ -69,7 +91,13 @@ public class Consulta {
 	}
 
 	public void setDiagnostico(String diagnostico) {
-		Diagnostico = diagnostico;
+
+		if(diagnostico=="") {
+
+			throw new RuntimeException("Cadena vacia no valida");
+		}else {
+			Diagnostico = diagnostico;
+		}
 	}
 
 	public String getVacunaId() {
@@ -77,7 +105,13 @@ public class Consulta {
 	}
 
 	public void setVacunaId(String vacunaId) {
-		VacunaId = vacunaId;
+
+		if(vacunaId=="") {
+
+			throw new RuntimeException("Cadena vacia no valida");
+		}else {
+			VacunaId = vacunaId;
+		}
 	}
 
 	@Override
@@ -134,7 +168,13 @@ public class Consulta {
 	}
 
 	public void setId(Integer id) {
-		this.id = id;
+
+		if(id<0) {
+
+			throw new RuntimeException("No se admiten numeros negativos");
+		}else {
+			this.id = id;
+		}
 	}
 
 	public List<Paciente> getPaciente() {
@@ -160,7 +200,7 @@ public class Consulta {
 	public void setCita_medica(CitaMedica cita_medica) {
 		this.cita_medica = cita_medica;
 	}
-	
-	
+
+
 
 }
