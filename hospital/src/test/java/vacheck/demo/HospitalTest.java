@@ -1,4 +1,4 @@
-package vacheck.demo.model;
+package vacheck.demo;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
