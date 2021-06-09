@@ -24,13 +24,6 @@ public class CitaMedicaTest {
 	}
 	
 	@Test
-	public void idCitaNoEstaVacio() {
-		Exception e = assertThrows(RuntimeException.class, ()-> citamedica.setIdCita(-1));
-		//assertEquals((citamedica.getIdCita() == null) || (citamedica.getIdCita() < 1) , false);
-		assertEquals("ID de la cita no valido.", e.getMessage());
-	}
-	
-	@Test
 	public void fechaCitaExiste() {
 		Exception e = assertThrows(RuntimeException.class, ()-> citamedica.setFechaCita(null));
 		assertEquals("No hay fecha asignada.", e.getMessage());

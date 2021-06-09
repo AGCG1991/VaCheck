@@ -32,7 +32,7 @@ public class Paciente {
 
 	public void setNombre(String nombre) {
 		if(nombre == "") {
-			throw new RuntimeException("Nombre no válido.");
+			throw new RuntimeException("Cadena vacia no valida.");
 		}
 		this.nombre = nombre;
 	}
@@ -43,7 +43,7 @@ public class Paciente {
 
 	public void setApellido(String apellido) {
 		if(apellido == "") {
-			throw new RuntimeException("Apellido no válido.");
+			throw new RuntimeException("Cadena vacia no valida.");
 		}
 		this.apellido = apellido;
 	}
@@ -79,9 +79,6 @@ public class Paciente {
 	}
 
 	public void setId(Integer id) {
-		if(id < 0) {
-			throw new RuntimeException("ID del paciente no valido (Tiene que ser positivo).");
-		}
 		this.id = id;
 	}
 

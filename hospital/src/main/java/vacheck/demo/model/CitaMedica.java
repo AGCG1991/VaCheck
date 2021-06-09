@@ -40,9 +40,6 @@ public class CitaMedica {
 	}
 
 	public void setIdCita(Integer idCita) {
-		if((idCita < 0) || (idCita == null)) {
-			throw new RuntimeException("ID de la cita no valido.");
-		}
 		IdCita = idCita;
 	}
 
