@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import vacheck.demo.model.Sanitario;
 import vacheck.demo.service.SanitarioService;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 
@@ -30,23 +30,23 @@ public class SanitarioController {
     }
 
     @PostMapping("/sanitario/save")
-    public String saveSanitario(Sanitario s) {
+    public String saveSanitario(Sanitario x) {
 
-        SanitarioService.save(s);
+        SanitarioService.save(x);
         return "redirect:/sanitario";
 
     }
 
     @RequestMapping("/sanitario/add")
     public String addSanitario(Model model) {
-        model.addAttribute("sanitario", new vacheck.demo.service.SanitarioService());
+        model.addAttribute("sanitario", new Sanitario());
         return "sanitario/add";
     }
 
     @RequestMapping("/sanitario/edit/{IdSanitario}")
     public String editSanitario(@PathVariable("IdSanitario") Integer IdSanitario, Model model) {
         model.addAttribute("sanitario", SanitarioService.getById(IdSanitario));
-        return "Sanitario/add";
+        return "sanitario/add";
     }
 
     @RequestMapping("/sanitario/view/{IdSanitario}")

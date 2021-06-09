@@ -41,43 +41,48 @@
                         <span class="usuario-logado" title="Identificado con certificado">
 
                             Usuario Conectado
-                        </span>
+                        </span><input id="ButtonCierreSesion" type="submit" name="ButtonCierreSesion" value=""
+									  tabindex="3" title="Cerrar sesión" class="bt-cierreSesion">
 				</div>
 			</div>
 		</div>
 
 		<div class="content ">
 
-				<div class="row u-w-90 ">
-					<div id="bloque-messages-user" class="bx-mensajes "></div>
-				</div>
+			<div class="row u-w-90 ">
+				<div id="bloque-messages-user" class="bx-mensajes "></div>
+			</div>
 
-				<div class="row bx-fb bx-general ">
+			<div class="row bx-fb bx-general ">
 
 
-						<!-- COMIENZO -->
+				<!-- COMIENZO -->
 
-						<h1>Listado de Sanitarios</h1>
-						<a th:href="@{/sanitario/add}">Añadir nuevo Sanitario</a>
-						<table>
-							<thead>
-							<tr>
-								<td>Id</td>
-							</tr>
-							</thead>
-							<tbody>
-							<tr th:each="ci : ${listaSanitarios}">
-								<td th:text="${ci.IDsanitario}"></td>
-								<td> </td>
-								<td>
-									<a th:href="@{/sanitario/view/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Ver </a>
-									<a th:href="@{/sanitario/edit/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Editar </a>
-									<a th:href="@{/sanitario/delete/{IDsanitario}(IDsanitario = ${ci.IDsanitario})}">Borrar</a> </td>
-							</tr>
-						</table>
-						<!-- TERMINO -->
+				<h1>Listado de Sanitarios</h1>
+				<a th:href="@{/sanitario/add}">Añadir nuevo Sanitario</a>
+				<table>
+					<thead>
+					<tr>
+						<td>Id</td>
+						<td>Nombre</td>
+						<td>Apellidos</td>
+					</tr>
+					</thead>
+					<tbody>
+					<tr th:each="s : ${listaSanitarios}">
+						<td th:text="${s.IdSanitario}"></td>
+						<td th:text="${s.nombre}"></td>
+						<td th:text="${s.apellido}"></td>
+						<td></td>
+						<td>
+							<a th:href="@{/sanitario/view/{IdSanitario}(IdSanitario = ${s.IdSanitario})}">Ver </a>
+							<a th:href="@{/sanitario/edit/{IdSanitario}(IdSanitario = ${s.IdSanitario})}">Editar </a>
+							<a th:href="@{/sanitario/delete/{IdSanitario}(IdSanitario = ${s.IdSanitario})}">Borrar</a> </td>
+					</tr>
+				</table>
+				<!-- TERMINO -->
 
-				</div>
+			</div>
 
 
 
